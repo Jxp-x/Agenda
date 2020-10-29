@@ -7,4 +7,4 @@
 
  mysqli_query($conexao,$sql) or die ("Erro ao excluir o registro " . mysqli_error($conexao));
 ?>
-<div class="alert alert-success" role="alert">"O contato foi atualizado com sucesso!"</div>
+<div class="alert alert-success" role="alert">"O contato foi deletado com sucesso!"</div>
