@@ -51,16 +51,10 @@
     </form>
   </div>
 </nav>
-
-
-
-
-
-
       </header>
       <main>
           <?php
-               $menuop =(isset($_GET["menuop"]))?$_GET["menuop"]:"home";
+               $menuop =(isset($_GET["menuop"]))?$_GET["menuop"]:"contatos";
                switch ($menuop) {
 
                  case 'contatos':
