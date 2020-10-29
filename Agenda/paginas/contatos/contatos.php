@@ -15,6 +15,7 @@
         <th>Data de Nasc.</th>
         <th>Email</th>
         <th>Editar</th>
+        <th>Deletar</th>
 
      </tr>
  </thead>
@@ -33,6 +34,7 @@ while($dados = mysqli_fetch_assoc($rs)){
            <td><?=$dados["datanasc"] ?></td>
            <td><?=$dados["email"] ?></td>
            <td><a href="index.php?menuop=editcont&id_contato=<?=$dados["id_contato"]?>">Editar</a></td>
+           <td><a href="index.php?menuop=dletcont&id_contato=<?=$dados["id_contato"]?>">Deletar</a></td>
        </tr>
        <?php
 }

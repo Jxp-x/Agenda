@@ -43,6 +43,9 @@
                    case 'attcont':
                     include ("paginas/contatos/attcont.php");
                    break;
+                   case 'dletcont':
+                    include ("paginas/contatos/dletcont.php");
+                   break;
 
                  case 'eventos':
                   include ("paginas/eventos/eventos.php");
