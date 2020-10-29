@@ -6,5 +6,5 @@
  $sql = "DELETE FROM contatos WHERE id_contato = '{$id_contato}'";
 
  mysqli_query($conexao,$sql) or die ("Erro ao excluir o registro " . mysqli_error($conexao));
- echo "registro exluido com sucesso";
 ?>
+<div class="alert alert-success" role="alert">"O contato foi atualizado com sucesso!"</div>
