@@ -1,3 +1,18 @@
+<style>   
+  .container {
+          width: 100vw;
+      height: 100vh;
+         display: flex;
+        flex-direction: row;
+        justify-content: center;
+         align-items: center
+    }
+    .box {
+        width: 300px;
+        height: 300px;
+    }
+ </style>
+
 <?php
 $id_contato = $_GET["id_contato"];
 
@@ -7,39 +22,18 @@ $dados = mysqli_fetch_assoc($rs);
 ?>
 
 <header>
-  <h3>Editar Contato</h3>
 </header>
-
-<div>
-<form action="index.php?menuop=attcont" method="post">
-
-   <div>
-     <label for="id_contato">ID</label>
-      <input type="text" name="id_contato" value="<?= $dados{"id_contato"}?>">
-   </div>
-   <div>
-     <label for="nome">Nome</label>
-      <input type="text" name="nome"value="<?= $dados{"nome"}?>">
-   </div>
-   <div>
-     <label for="telefone">Telefone</label>
-      <input type="text" name="telefone"value="<?= $dados{"telefone"}?>">
-   </div>
-   <div>
-     <label for="idade">Idade</label>
-      <input type="text" name="idade"value="<?= $dados{"idade"}?>">
-   </div>
-   <div>
-     <label for="datanasc">Data de Nascimento</label>
-      <input type="date" name="datanasc"value="<?= $dados{"datanasc"}?>">
-   </div>
-   <div>
-     <label for="email">E-Mail</label>
-      <input type="email" name="email"value="<?= $dados{"email"}?>">
-   </div>
-   <div>
-   <input type="submit" value="Atualiza" name="btnAtt">
-   </div>
+<div class="container">
+<div class="box">
+<form action="index.php?menuop=attcont" class="form-cad" method="post">
+<h1 class="h3 mb-3 font-weight-normal=">Atualizar Contato</h1>
+<input type="text" name="id_contato"class="form-control" placeholder="E-mail" maxlength="40"value="<?= $dados{"id_contato"}?>" required >
+<input type="text" name="nome" class="form-control"  placeholder="Nome completo" maxlength="30" value="<?= $dados{"nome"}?>" required autofocus>
+<input type="email" name="email"class="form-control" placeholder="E-mail" maxlength="40"value="<?= $dados{"email"}?>" required >
+<input type="text" name="telefone"class="form-control" placeholder="Telefone" maxlength="40" required value="<?= $dados{"telefone"}?>">
+<input type="text" name="idade"class="form-control" placeholder="Idade" maxlength="40" value="<?= $dados{"idade"}?>"required >
+<input type="date" name="datanasc"class="form-control" placeholder="Data de Nascimento"value="<?= $dados{"datanasc"}?>" maxlength="40" required >
+<button class="btn btn-lg btn-primary btn-block" type="submit" value="Atualiza">Adicionar</button>  
 
 
 </form>

@@ -26,8 +26,5 @@
     mysqli_query($conexao,$sql) or die ("Erro ao executar a consulta. " . mysqli_error($conexao));
     ?>
     <div class="alert alert-success" role="alert">"O contato foi adicionado com sucesso!"</div>
-
+    
 </div>
-
-<?php
-?>

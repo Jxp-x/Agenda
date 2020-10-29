@@ -20,7 +20,5 @@ $id_contato = mysqli_real_escape_string ($conexao,$_POST["id_contato"]);
 
 
     mysqli_query($conexao,$sql) or die ("Erro ao executar a consulta. " . mysqli_error($conexao));
-    echo "O contato foi atualizado com sucesso!";
-
-
-?>
+    ?>
+    <div class="alert alert-success" role="alert">"O contato foi adicionado com sucesso!"</div>
