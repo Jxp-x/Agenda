@@ -1,3 +1,7 @@
+<?php
+ include("db/conexao.php");
+ ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,6 +20,7 @@
           </nav>
       </header>
       <main>
+      <hr>
           <?php
                $menuop =(isset($_GET["menuop"]))?$_GET["menuop"]:"home";
                switch ($menuop) {
@@ -25,6 +30,18 @@
 
                  case 'contatos':
                     include ("paginas/contatos/contatos.php");
+                   break;
+                   case 'addcont':
+                    include ("paginas/contatos/addcont.php");
+                   break;
+                   case 'cadcont':
+                    include ("paginas/contatos/cadcont.php");
+                   break;
+                   case 'editcont':
+                    include ("paginas/contatos/editcont.php");
+                   break;
+                   case 'attcont':
+                    include ("paginas/contatos/attcont.php");
                    break;
 
                  case 'eventos':
@@ -42,6 +59,7 @@
           
             
           ?>
+
       </main>
 </body>    
 </html>
