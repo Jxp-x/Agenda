@@ -1,33 +1,47 @@
+<style>   
+.container {
+         display: flex;
+        flex-direction: row;
+        justify-content: center;
+         align-items: center
+    }
+    </style>   
 <header>
-   <h3>Contatos</h3>
-
 </header>
-<div>
-<a href="index.php?menuop=addcont"> Add Contato</a>
-</div>
-<table border="1">
+
+<div class="container">
+<table class="table table-bordered table-striped table-hover">
  <thead>
      <tr>
-        <th>ID</th>
-        <th>Nome</th>
-        <th>Telefone</th>
-        <th>Idade</th>
-        <th>Data de Nasc.</th>
-        <th>Email</th>
-        <th>Editar</th>
-        <th>Deletar</th>
-
+        <th scope>ID</th>
+        <th scope>Nome</th>
+        <th scope>Telefone</th>
+        <th scope>Idade</th>
+        <th scope>Data de Nasc.</th>
+        <th scope>Email</th>
+        <th scope>Editar</th>
+        <th scope>Deletar</th>
      </tr>
  </thead>
        <tbody>
 <?php
-$sql = "SELECT * FROM contatos";
+$txt_pesquisa = (isset($_POST["txt_pesquisa"]))?$_POST["txt_pesquisa"]:"";
+
+
+$sql = "SELECT * FROM contatos
+ WHERE 
+ id_contato='{$txt_pesquisa}' or
+ nome LIKE '%{$txt_pesquisa}%'
+ ORDER BY nome ASC
+ ";
+
+
 $rs = mysqli_query($conexao,$sql) or die("Erro ao concultar a tabela " . mysqli_error($conexao));     
 while($dados = mysqli_fetch_assoc($rs)){
 
 ?>
        <tr>
-           <td><?=$dados["id_contato"] ?></td>
+           <th scope="row"><?=$dados["id_contato"] ?></td>
            <td><?=$dados["nome"] ?></td>
            <td><?=$dados["telefone"] ?></td>
            <td><?=$dados["idade"] ?></td>
@@ -41,3 +55,4 @@ while($dados = mysqli_fetch_assoc($rs)){
 ?> 
      </tbody>
 </table>
+</div>
