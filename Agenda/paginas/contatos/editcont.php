@@ -34,7 +34,5 @@ $dados = mysqli_fetch_assoc($rs);
 <input type="text" name="idade"class="form-control" placeholder="Idade" maxlength="40" value="<?= $dados{"idade"}?>"required >
 <input type="date" name="datanasc"class="form-control" placeholder="Data de Nascimento"value="<?= $dados{"datanasc"}?>" maxlength="40" required >
 <button class="btn btn-lg btn-primary btn-block" type="submit" value="Atualiza">Adicionar</button>  
-
-
 </form>
 </div>
