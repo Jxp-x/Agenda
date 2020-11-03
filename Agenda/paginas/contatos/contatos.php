@@ -1,16 +1,8 @@
-<style>   
-.container {
-         display: flex;
-        flex-direction: row;
-        justify-content: center;
-         align-items: center
-    }
-    </style>   
-<header>
-</header>
 
 <div class="container">
+<div class="table-responsive">
 <table class="table table-bordered table-striped table-hover">
+
  <thead>
      <tr>
         <th scope>Nome</th>
@@ -55,3 +47,5 @@ while($dados = mysqli_fetch_assoc($rs)){
      </tbody>
 </table>
 </div>
+</div></div>
+

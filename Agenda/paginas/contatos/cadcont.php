@@ -1,6 +1,4 @@
-<header>
-<h3>Cadastro do Contato</h3>
-</header>
+
 <?php 
 
  $nome = mysqli_real_escape_string ($conexao,$_POST["nome"]);
@@ -25,6 +23,9 @@
      ";
     mysqli_query($conexao,$sql) or die ("Erro ao executar a consulta. " . mysqli_error($conexao));
     ?>
-    <div class="alert alert-success" role="alert">O contato foi adicionado com sucesso!</div>
+ <script type="text/javascript">
+	alert("Contato Cadastrado com Sucesso, aguarde um segundo...");
+	window.location="index.php";
+</script>
     
 </div>
