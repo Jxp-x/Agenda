@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: 29-Out-2020 às 22:50
+-- Generation Time: 03-Nov-2020 às 21:41
 -- Versão do servidor: 5.6.15-log
 -- PHP Version: 5.4.24
 
@@ -34,18 +34,7 @@ CREATE TABLE IF NOT EXISTS `contatos` (
   `datanasc` date NOT NULL,
   `email` varchar(100) NOT NULL,
   PRIMARY KEY (`id_contato`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=9 ;
-
---
--- Extraindo dados da tabela `contatos`
---
-
-INSERT INTO `contatos` (`id_contato`, `nome`, `telefone`, `idade`, `datanasc`, `email`) VALUES
-(1, 'Giuliano Ito Marim', '55 999998888', 42, '1970-04-01', 'giuliano.boss@gmail.com'),
-(2, 'Daniel Bonfante Ito Marim', '55 988887777', 18, '2002-09-24', 'daniel.itomarim@gmail.com'),
-(6, 'Leonardo Bonfante I', '55 98484 8445', 20, '1900-12-15', 'leo-ito@hotmail.com'),
-(7, 'Thiago Telles', '111111111', 13, '2007-09-27', 'thiago@gmail.com'),
-(8, 'Jorel Cristo', '22222222222', 18, '1991-01-01', 'jorel@gmail.com');
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=27 ;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
